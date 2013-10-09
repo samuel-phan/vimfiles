@@ -1,4 +1,0 @@
-vimfiles
-========
-
-My Vim configuration
