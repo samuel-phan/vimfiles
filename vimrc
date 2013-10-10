@@ -93,8 +93,8 @@ filetype plugin indent on
 "highlight normal guibg=#333333 guifg=grey
 set background=dark
 if has('gui_running')
-    "source $VIMRUNTIME/mswin.vim
-    "behave mswin
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
     set guifont=DejaVu\ Sans\ Mono\ 9
     colorscheme solarized
     hi cursor guifg=yellow guibg=red
