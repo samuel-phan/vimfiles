@@ -1,9 +1,3 @@
-if has('gui_running')
-    set guifont=DejaVu\ Sans\ Mono\ 9
-    source $VIMRUNTIME/mswin.vim
-    behave mswin
-endif
-
 set nocompatible
 set ignorecase " Ignore case
 set incsearch " Incremental search
@@ -31,36 +25,8 @@ Bundle 'gmarik/vundle'
 
 " The bundles you install will be listed here
 Bundle 'Lokaltog/vim-easymotion'
+
 Bundle 'klen/python-mode'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'scrooloose/nerdtree'
-map <F2> :NERDTreeToggle<CR>
-
-" Themes
-Bundle 'junegunn/seoul256.vim'
-Bundle 'altercation/vim-colors-solarized'
-
-filetype plugin indent on
-
-" The rest of your config follows here
-
-"highlight normal guibg=#333333 guifg=grey
-colorscheme seoul256
-set background=dark
-
-"hi question gui=NONE guifg=green
-"hi moremsg gui=NONE guifg=green
-"hi modemsg gui=NONE guifg=white
-"hi visual guifg=blue guibg=cyan
-hi cursor guifg=yellow guibg=red
-"hi string guifg=#ff6060
-"hi Statement gui=NONE
-"hi type gui=NONE
-"hi errormsg guibg=red guifg=black
-"hi constant guifg=#ff8080
-"hi title gui=none
-
-
 " Python-mode
 " Activate rope
 " Keys:
@@ -75,6 +41,9 @@ hi cursor guifg=yellow guibg=red
 " [M            Jump on previous class or method (normal, visual, operator modes)
 " ]M            Jump on next class or method (normal, visual, operator modes)
 let g:pymode_rope = 0
+
+" Set default pymode python options
+let g:pymode_options = 1
 
 " Documentation
 let g:pymode_doc = 1
@@ -101,4 +70,47 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
 " Don't autofold code
 let g:pymode_folding = 0
+
+" Autoremove unused whitespaces
+let g:pymode_utils_whitespaces = 0
+
+Bundle 'nathanaelkane/vim-indent-guides'
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_enable_on_vim_startup = 1
+
+Bundle 'davidhalter/jedi-vim'
+Bundle 'scrooloose/nerdtree'
+map <F2> :NERDTreeToggle<CR>
+
+" Themes
+Bundle 'altercation/vim-colors-solarized'
+
+filetype plugin indent on
+
+" The rest of your config follows here
+
+"highlight normal guibg=#333333 guifg=grey
+set background=dark
+if has('gui_running')
+    "source $VIMRUNTIME/mswin.vim
+    "behave mswin
+    set guifont=DejaVu\ Sans\ Mono\ 9
+    colorscheme solarized
+    hi cursor guifg=yellow guibg=red
+    hi comment guifg=#80a0ff
+    hi todo gui=bold guibg=purple4
+    hi error guibg=red4
+    hi visual guifg=NONE guibg=NONE
+endif
+
+"hi question gui=NONE guifg=green
+"hi moremsg gui=NONE guifg=green
+"hi modemsg gui=NONE guifg=white
+"hi string guifg=#ff6060
+"hi Statement gui=NONE
+"hi type gui=NONE
+"hi errormsg guibg=red guifg=black
+"hi constant guifg=#ff8080
+"hi title gui=none
 
