@@ -1,3 +1,8 @@
+if has('gui_running')
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
+endif
+
 set nocompatible
 set ignorecase " Ignore case
 set incsearch " Incremental search
@@ -87,15 +92,11 @@ map <F2> :NERDTreeToggle<CR>
 " Themes
 Bundle 'altercation/vim-colors-solarized'
 
-filetype plugin indent on
-
 " The rest of your config follows here
 
 "highlight normal guibg=#333333 guifg=grey
 set background=dark
 if has('gui_running')
-    source $VIMRUNTIME/mswin.vim
-    behave mswin
     set guifont=DejaVu\ Sans\ Mono\ 9
     colorscheme solarized
     hi cursor guifg=yellow guibg=red
@@ -115,3 +116,4 @@ endif
 "hi constant guifg=#ff8080
 "hi title gui=none
 
+filetype plugin indent on
