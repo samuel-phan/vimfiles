@@ -5,7 +5,9 @@ endif
 
 set nocompatible
 set noswapfile
+
 set ignorecase " Ignore case
+set smartcase " be case sensitive when input has a capital letter
 set incsearch " Incremental search
 set hlsearch " Highlight search
 
