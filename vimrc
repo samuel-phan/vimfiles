@@ -94,7 +94,6 @@ Bundle 'altercation/vim-colors-solarized'
 
 " The rest of your config follows here
 
-"highlight normal guibg=#333333 guifg=grey
 set background=dark
 if has('gui_running')
     set guifont=DejaVu\ Sans\ Mono\ 9
@@ -105,15 +104,5 @@ if has('gui_running')
     hi error guibg=red4
     hi visual guifg=NONE guibg=NONE
 endif
-
-"hi question gui=NONE guifg=green
-"hi moremsg gui=NONE guifg=green
-"hi modemsg gui=NONE guifg=white
-"hi string guifg=#ff6060
-"hi Statement gui=NONE
-"hi type gui=NONE
-"hi errormsg guibg=red guifg=black
-"hi constant guifg=#ff8080
-"hi title gui=none
 
 filetype plugin indent on
