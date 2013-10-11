@@ -4,6 +4,7 @@ if has('gui_running')
 endif
 
 set nocompatible
+set noswapfile
 set ignorecase " Ignore case
 set incsearch " Incremental search
 set hlsearch " Highlight search
