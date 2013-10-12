@@ -3,38 +3,44 @@ if has('gui_running')
     behave mswin
 endif
 
+" General " {{{
 set nocompatible
+
 set noswapfile
 
-set ignorecase " Ignore case
-set smartcase " be case sensitive when input has a capital letter
-set incsearch " Incremental search
-set hlsearch " Highlight search
+set hlsearch    " Highlight search
+set ignorecase  " Ignore case
+set smartcase   " Be case sensitive when input has a capital letter
+set incsearch   " Incremental search
+" " }}}
 
+" Formatting " {{{
+set tabstop=4       " Tell how many columns a tab counts for
+set shiftwidth=4    " Tell how many columns text is indented with the reindent operations (<< and >>)
+set softtabstop=4   " Tell how many spaces a <Tab> or a <BS> counts for
+set expandtab       " Expand tab to spaces
+set autoindent      " Auto indent depending on the file type
+" " }}}
+
+" Visual " {{{
 set linebreak
 set showbreak=>
 
-set ts=4 " tab stop : tell how many columns a tab counts for
-set sw=4 " shift width : tell how many columns text is indented with the reindent operations (<< and >>)
-set sts=4 " soft tab stop : tell how many spaces a <Tab> or a <BS> counts for
-set et " expand tab to spaces
-set ai " auto indent depending on the file type
-
 set listchars=eol:$,trail:·
+" " }}}
 
+" Scripts and Bundles " {{{
 filetype off
-
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" let Vundle manage Vundle
-" required!
 Bundle 'gmarik/vundle'
 
-" The bundles you install will be listed here
+" Programming
 Bundle 'Lokaltog/vim-easymotion'
-
+Bundle 'davidhalter/jedi-vim'
 Bundle 'klen/python-mode'
+
 " Python-mode
 " Activate rope
 " Keys:
@@ -57,11 +63,10 @@ let g:pymode_options = 1
 let g:pymode_doc = 1
 let g:pymode_doc_key = 'K'
 
-"Linting
+" Linting
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
-" Auto check on save
-let g:pymode_lint_write = 1
+let g:pymode_lint_write = 1 " Auto check on save
 let g:pymode_lint_ignore = "E501"  " ignore too long line
 
 " Support virtualenv
@@ -71,7 +76,7 @@ let g:pymode_virtualenv = 1
 let g:pymode_breakpoint = 1
 let g:pymode_breakpoint_key = '<leader>b'
 
-" syntax highlighting
+" Syntax highlighting
 let g:pymode_syntax = 1
 let g:pymode_syntax_all = 1
 let g:pymode_syntax_indent_errors = g:pymode_syntax_all
@@ -88,16 +93,16 @@ let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_enable_on_vim_startup = 1
 
-Bundle 'davidhalter/jedi-vim'
+
+" Utility
 Bundle 'scrooloose/nerdtree'
 map <F2> :NERDTreeToggle<CR>
 
-" Themes
+
+" Colorscheme
 Bundle 'altercation/vim-colors-solarized'
 
-" The rest of your config follows here
 
-set background=dark
 if has('gui_running')
     set guifont=DejaVu\ Sans\ Mono\ 9
     colorscheme solarized
@@ -106,6 +111,13 @@ if has('gui_running')
     hi todo gui=bold guibg=purple4
     hi error guibg=red4
     hi visual guifg=NONE guibg=NONE
-endif
+else
+    colorscheme default
 
-filetype plugin indent on
+    " Disable the indent guides that cause black columns in console
+    let g:indent_guides_enable_on_vim_startup = 0
+endif
+set background=dark
+
+filetype plugin indent on  " Automatically detect file types.
+" " }}}
