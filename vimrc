@@ -67,7 +67,8 @@ let g:pymode_doc_key = 'K'
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
 let g:pymode_lint_write = 1 " Auto check on save
-let g:pymode_lint_ignore = "E501"  " ignore too long line
+let g:pymode_lint_ignore = "E501"       " E501 line too long (137 > 79 characters) [pep8]
+let g:pymode_lint_ignore .= ",E302"     " E302 expected 2 blank lines, found 0 [pep8]
 
 " Support virtualenv
 let g:pymode_virtualenv = 1
