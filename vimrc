@@ -123,3 +123,6 @@ endif
 
 filetype plugin indent on  " Automatically detect file types.
 " " }}}
+
+" Fine tuning for file type
+autocmd FileType gitcommit setlocal textwidth=0
