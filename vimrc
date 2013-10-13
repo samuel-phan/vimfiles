@@ -106,6 +106,7 @@ Bundle 'altercation/vim-colors-solarized'
 
 if has('gui_running')
     set guifont=DejaVu\ Sans\ Mono\ 9
+    set background=dark
     colorscheme solarized
     hi cursor guifg=yellow guibg=red
     hi comment guifg=#80a0ff
@@ -114,11 +115,11 @@ if has('gui_running')
     hi visual guifg=NONE guibg=NONE
 else
     colorscheme default
+    set background=dark
 
     " Disable the indent guides that cause black columns in console
     let g:indent_guides_enable_on_vim_startup = 0
 endif
-set background=dark
 
 filetype plugin indent on  " Automatically detect file types.
 " " }}}
