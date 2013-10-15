@@ -84,7 +84,7 @@ let g:pymode_syntax_indent_errors = g:pymode_syntax_all
 let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
 " Don't autofold code
-let g:pymode_folding = 0
+let g:pymode_folding = 1
 
 " Autoremove unused whitespaces
 let g:pymode_utils_whitespaces = 0
@@ -126,3 +126,5 @@ filetype plugin indent on  " Automatically detect file types.
 
 " Fine tuning for file type
 autocmd FileType gitcommit setlocal textwidth=0
+
+set nofoldenable
