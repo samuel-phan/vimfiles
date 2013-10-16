@@ -1,0 +1,58 @@
+" Behavior
+
+if has('gui_running')
+    set guifont=DejaVu\ Sans\ Mono\ 9
+    source $VIMRUNTIME/mswin.vim
+    behave mswin
+endif
+
+set nocompatible " Use Vim defaults (much better!)
+set hidden " Keep changes to the buffers without writing them to the file
+set ignorecase " Ignore case
+
+" Display
+
+set showmode " Show edit mode
+set ruler " Show the ruler
+"set number " Show the line
+set showmatch " Show matching parenthesis
+set incsearch " Incremental search
+set hlsearch " Highlight search
+"set list " Show non-printable characters
+set linebreak
+set showbreak=>
+
+set ts=4 " tab stop : tell how many columns a tab counts for
+set sw=4 " shift width : tell how many columns text is indented with the reindent operations (<< and >>)
+set sts=4 " soft tab stop : tell how many spaces a <Tab> or a <BS> counts for
+autocmd FileType html,htmlcheetah,rst,xhtml set ts=2 sw=2 sts=2
+set et " expand tab to spaces
+set ai " auto indent depending on the file type
+"set smartindent " recognize the "if" and other stuff to indent correctly
+" causes '#' to the beginning of the line and insensitive to '>>' & '<<'
+
+highlight normal guibg=#333333 guifg=grey
+set background=dark
+
+hi question gui=NONE guifg=green
+hi moremsg gui=NONE guifg=green
+hi modemsg gui=NONE guifg=white
+hi visual guifg=blue guibg=cyan
+hi cursor guifg=yellow guibg=red
+hi string guifg=#ff6060
+hi Statement gui=NONE
+hi type gui=NONE
+hi errormsg guibg=red guifg=black
+hi constant guifg=#ff8080
+hi title gui=none
+
+" Coding
+
+set listchars=eol:$,trail:·
+syntax enable
+set foldmethod=indent " fold blocks based on indentation (classes, methods, etc.)
+"set foldlevelstart=20
+" unfold all
+filetype on
+filetype plugin on
+autocmd Syntax xf86conf,c,cpp,vim,xml,html,htmlcheetah,xhtml,perl,python,rst,sh,sql,javascript normal zR
