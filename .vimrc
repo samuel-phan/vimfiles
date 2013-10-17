@@ -126,6 +126,8 @@ filetype plugin indent on  " Automatically detect file types.
 
 " Fine tuning for file type
 autocmd FileType gitcommit setlocal textwidth=0
+autocmd FileType python setlocal textwidth=120
+autocmd FileType python set wrap
 autocmd FileType html,htmlcheetah,rst,xhtml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 set nofoldenable
