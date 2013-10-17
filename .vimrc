@@ -130,4 +130,9 @@ autocmd FileType python setlocal textwidth=120
 autocmd FileType python set wrap
 autocmd FileType html,htmlcheetah,rst,xhtml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
+" Key mappings " {{{
+map ]} ]M
+map [{ [M
+" " }}}
+
 set nofoldenable
