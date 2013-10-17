@@ -22,12 +22,12 @@ set hlsearch " Highlight search
 set linebreak
 set showbreak=>
 
-set ts=4 " tab stop : tell how many columns a tab counts for
-set sw=4 " shift width : tell how many columns text is indented with the reindent operations (<< and >>)
-set sts=4 " soft tab stop : tell how many spaces a <Tab> or a <BS> counts for
-autocmd FileType html,htmlcheetah,rst,xhtml set ts=2 sw=2 sts=2
-set et " expand tab to spaces
-set ai " auto indent depending on the file type
+set tabstop=4 " tab stop : tell how many columns a tab counts for
+set shiftwidth=4 " shift width : tell how many columns text is indented with the reindent operations (<< and >>)
+set softtabstop=4 " soft tab stop : tell how many spaces a <Tab> or a <BS> counts for
+autocmd FileType html,htmlcheetah,rst,xhtml setlocal tabstop=2 shiftwidth=2 softtabstop=2
+set expandtab " expand tab to spaces
+set autoindent " auto indent depending on the file type
 "set smartindent " recognize the "if" and other stuff to indent correctly
 " causes '#' to the beginning of the line and insensitive to '>>' & '<<'
 
