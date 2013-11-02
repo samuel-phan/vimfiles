@@ -5,7 +5,7 @@ Installation (**read-only**)::
 
     git clone https://github.com/samuel-phan/vimfiles.git ~/.vim
     git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-    vim -u .vim/.vimrc +BundleInstall +qall
+    vim -u ~/.vim/.vimrc +BundleInstall +qall
     ln -s .vim/.vimrc ~/.vimrc
 
 Installation (**read-write**)::
