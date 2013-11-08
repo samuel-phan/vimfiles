@@ -131,6 +131,11 @@ autocmd FileType python set wrap
 autocmd FileType css,html,htmlcheetah,htmldjango,rst,xhtml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 " Key mappings " {{{
+nnoremap <silent> <C-H> :tabprevious<CR>
+nnoremap <silent> <C-L> :tabnext<CR>
+" move tab to left/right
+nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
+nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 map ]} ]M
 map [{ [M
 " " }}}
