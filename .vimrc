@@ -20,6 +20,7 @@ set shiftwidth=4    " Tell how many columns text is indented with the reindent o
 set softtabstop=4   " Tell how many spaces a <Tab> or a <BS> counts for
 set expandtab       " Expand tab to spaces
 set autoindent      " Auto indent depending on the file type
+set textwidth=0     " Prevent auto-line break
 " " }}}
 
 " Visual " {{{
@@ -125,7 +126,6 @@ filetype plugin indent on  " Automatically detect file types.
 " " }}}
 
 " Fine tuning for file type
-autocmd FileType gitcommit setlocal textwidth=0
 autocmd FileType python setlocal textwidth=120
 autocmd FileType python set wrap
 autocmd FileType css,html,htmlcheetah,htmldjango,rst,xhtml setlocal tabstop=2 shiftwidth=2 softtabstop=2
