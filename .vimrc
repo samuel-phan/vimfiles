@@ -41,6 +41,7 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'klen/python-mode'
+Bundle 'saltstack/salt-vim'
 
 " Python-mode
 " Activate rope
