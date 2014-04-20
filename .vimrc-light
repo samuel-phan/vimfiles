@@ -53,6 +53,7 @@ syntax enable
 set foldmethod=indent " fold blocks based on indentation (classes, methods, etc.)
 "set foldlevelstart=20
 " unfold all
-filetype on
-filetype plugin on
-autocmd Syntax xf86conf,c,cpp,vim,xml,html,htmlcheetah,xhtml,perl,python,rst,sh,sql,javascript normal zR
+filetype plugin indent on
+autocmd BufRead,BufNewFile /etc/nginx/*.conf setfiletype conf
+
+set nofoldenable
