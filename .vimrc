@@ -127,6 +127,7 @@ filetype plugin indent on  " Automatically detect file types.
 " " }}}
 
 " Fine tuning for file type
+autocmd BufRead,BufNewFile *.conf setfiletype conf
 autocmd FileType gitcommit setlocal textwidth=0
 autocmd FileType python setlocal textwidth=120
 autocmd FileType python set wrap
