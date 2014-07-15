@@ -38,8 +38,6 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Programming
-Bundle 'Lokaltog/vim-easymotion'
-"Bundle 'davidhalter/jedi-vim'
 Bundle 'klen/python-mode'
 Bundle 'saltstack/salt-vim'
 
@@ -56,7 +54,7 @@ Bundle 'saltstack/salt-vim'
 " ]]            Jump on next class or function (normal, visual, operator modes)
 " [M            Jump on previous class or method (normal, visual, operator modes)
 " ]M            Jump on next class or method (normal, visual, operator modes)
-let g:pymode_rope = 0
+let g:pymode_rope = 1
 
 " Set default pymode python options
 let g:pymode_options = 1
