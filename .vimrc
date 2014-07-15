@@ -32,14 +32,14 @@ set listchars=eol:$,trail:·
 
 " Scripts and Bundles " {{{
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Programming
-Bundle 'klen/python-mode'
-Bundle 'saltstack/salt-vim'
+Plugin 'klen/python-mode'
+Plugin 'saltstack/salt-vim'
 
 " Python-mode
 " Activate rope
@@ -89,19 +89,19 @@ let g:pymode_folding = 1
 " Autoremove unused whitespaces
 let g:pymode_utils_whitespaces = 0
 
-Bundle 'nathanaelkane/vim-indent-guides'
+Plugin 'nathanaelkane/vim-indent-guides'
 let g:indent_guides_guide_size = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_enable_on_vim_startup = 1
 
 
 " Utility
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 map <F2> :NERDTreeToggle<CR>
 
 
 " Colorscheme
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 
 
 if has('gui_running')
