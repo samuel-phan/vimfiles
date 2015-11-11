@@ -26,6 +26,8 @@ set textwidth=0     " Prevent auto-line break
 " Visual " {{{
 set linebreak
 set showbreak=>
+set laststatus=2
+set wildmenu
 
 set listchars=eol:$,trail:·
 " " }}}
