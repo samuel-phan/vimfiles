@@ -25,7 +25,6 @@ set showbreak=>
 set tabstop=4 " tab stop : tell how many columns a tab counts for
 set shiftwidth=4 " shift width : tell how many columns text is indented with the reindent operations (<< and >>)
 set softtabstop=4 " soft tab stop : tell how many spaces a <Tab> or a <BS> counts for
-autocmd FileType html,htmlcheetah,rst,xhtml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 set expandtab " expand tab to spaces
 set autoindent " auto indent depending on the file type
 "set smartindent " recognize the "if" and other stuff to indent correctly
@@ -33,18 +32,6 @@ set autoindent " auto indent depending on the file type
 
 highlight normal guibg=#333333 guifg=grey
 set background=dark
-
-hi question gui=NONE guifg=green
-hi moremsg gui=NONE guifg=green
-hi modemsg gui=NONE guifg=white
-hi visual guifg=blue guibg=cyan
-hi cursor guifg=yellow guibg=red
-hi string guifg=#ff6060
-hi Statement gui=NONE
-hi type gui=NONE
-hi errormsg guibg=red guifg=black
-hi constant guifg=#ff8080
-hi title gui=none
 
 " Coding
 
@@ -55,5 +42,7 @@ set foldmethod=indent " fold blocks based on indentation (classes, methods, etc.
 " unfold all
 filetype plugin indent on
 autocmd BufRead,BufNewFile /etc/nginx/*.conf setfiletype conf
+autocmd FileType html,htmlcheetah,rst,xhtml setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType python setlocal indentkeys-=<:>
 
 set nofoldenable
