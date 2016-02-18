@@ -132,6 +132,7 @@ autocmd FileType gitcommit setlocal textwidth=0
 autocmd FileType python setlocal textwidth=120
 autocmd FileType python set wrap
 autocmd FileType css,html,htmlcheetah,htmldjango,rst,xhtml setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2 indentexpr=
 
 " Key mappings " {{{
 nnoremap <silent> <C-H> :tabprevious<CR>
