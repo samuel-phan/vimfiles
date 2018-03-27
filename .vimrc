@@ -42,7 +42,6 @@ Bundle 'gmarik/vundle'
 " Programming
 Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'klen/python-mode'
-Bundle 'saltstack/salt-vim'
 
 " Python-mode
 " Activate rope
