@@ -124,6 +124,7 @@ else
 endif
 
 filetype plugin indent on  " Automatically detect file types.
+syntax on
 " " }}}
 
 " Fine tuning for file type
