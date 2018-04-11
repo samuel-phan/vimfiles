@@ -27,6 +27,7 @@ set textwidth=0     " Prevent auto-line break
 " " }}}
 
 " Visual " {{{
+set ruler
 set linebreak
 set showbreak=>
 set laststatus=2
