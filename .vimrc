@@ -15,6 +15,7 @@ set hlsearch    " Highlight search
 set ignorecase  " Ignore case
 set smartcase   " Be case sensitive when input has a capital letter
 set incsearch   " Incremental search
+set backspace=indent,eol,start " Allow backspace on any character
 " " }}}
 
 " Formatting " {{{
